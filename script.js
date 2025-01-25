@@ -15,7 +15,7 @@ async function sendMessage() {
 
   try {
     // Send message to n8n webhook
-    const response = await fetch('https://your-n8n-instance/webhook/chat', {
+    const response = await fetch('https://egreentech.app.n8n.cloud/webhook/9b0a81f4-fd09-4c5e-9936-74879a18e9e7', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ query: message }),
