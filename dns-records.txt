@@ -1,0 +1,65 @@
+# A Record
+Type: A
+Name: @
+Value: 76.76.21.21
+TTL: 5 minutes
+
+# CNAME Record
+Type: CNAME
+Name: www
+Value: aiautoeye.netlify.app
+TTL: 5 minutes
+
+# MX Records
+Type: MX
+Name: @
+Value: smtp.gmail.com
+Priority: 1
+TTL: 1 hour
+
+Type: MX
+Name: @
+Value: smtp-relay.gmail.com
+Priority: 5
+TTL: 1 hour
+
+# SPF Record
+Type: TXT
+Name: @
+Value: "v=spf1 include:_spf.google.com include:_spf.mx.cloudflare.net ~all"
+TTL: 1 hour
+
+# DMARC Record
+Type: TXT
+Name: _dmarc
+Value: "v=DMARC1; p=quarantine; rua=mailto:aiautoeye@gmail.com; ruf=mailto:aiautoeye@gmail.com; pct=100"
+TTL: 1 hour
+
+# DKIM Record (Add after getting the key from Google Workspace)
+Type: TXT
+Name: google._domainkey
+Value: "v=DKIM1; k=rsa; p=[Your DKIM key will go here]"
+TTL: 1 hour
+
+# Security Headers
+Type: TXT
+Name: @
+Value: "v=security; mode=enforce;"
+TTL: 1 hour
+
+# CAA Records
+Type: CAA
+Name: @
+Value: 0 issue "letsencrypt.org"
+TTL: 1 hour
+
+Type: CAA
+Name: @
+Value: 0 issuewild "letsencrypt.org"
+TTL: 1 hour
+
+# Additional Security Record
+Type: TXT
+Name: _github-pages-challenge-aiautoeye
+Value: "[Your GitHub verification code will go here]"
+TTL: 1 hour
